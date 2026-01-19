@@ -122,7 +122,7 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "grid-pattern": "linear-gradient(to right, hsl(222 30% 18% / 0.3) 1px, transparent 1px), linear-gradient(to bottom, hsl(222 30% 18% / 0.3) 1px, transparent 1px)",
+        "grid-pattern": "linear-gradient(to right, hsl(0 0% 85% / 0.4) 1px, transparent 1px), linear-gradient(to bottom, hsl(0 0% 85% / 0.4) 1px, transparent 1px)",
       },
     },
   },
