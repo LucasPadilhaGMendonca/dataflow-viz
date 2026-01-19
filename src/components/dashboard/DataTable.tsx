@@ -99,7 +99,7 @@ export const DataTable = () => {
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-secondary/30">
+            <tr className="bg-muted/50">
               <th className="px-4 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">Código</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">Cliente</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">Produto</th>
@@ -115,7 +115,7 @@ export const DataTable = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 + index * 0.05 }}
-                className="hover:bg-secondary/20 transition-colors"
+                className="hover:bg-muted/30 transition-colors"
               >
                 <td className="px-4 py-3 text-sm font-mono text-primary">{row.codigo}</td>
                 <td className="px-4 py-3">

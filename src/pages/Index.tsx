@@ -12,10 +12,10 @@ import { DataTable } from "@/components/dashboard/DataTable";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background effects */}
-      <div className="fixed inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-30" />
-      <div className="fixed top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
-      <div className="fixed bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
+      {/* Background effects - Light theme */}
+      <div className="fixed inset-0 bg-grid-pattern bg-[size:40px_40px] opacity-20" />
+      <div className="fixed top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
+      <div className="fixed bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]" />
       
       <div className="relative z-10">
         <Header />

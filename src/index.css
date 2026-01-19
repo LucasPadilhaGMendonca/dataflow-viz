@@ -6,73 +6,81 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    /* Edge Color Palette - Light Theme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 20%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 187 100% 50%;
-    --primary-foreground: 222 47% 6%;
+    /* Primary: Cyan #00d0f2 */
+    --primary: 189 100% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 47% 14%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary: Purple #4c009f */
+    --secondary: 269 100% 31%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 30% 18%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 32 100% 55%;
-    --accent-foreground: 222 47% 6%;
+    /* Accent: Orange #f58a1f */
+    --accent: 30 91% 54%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --success: 142 76% 45%;
-    --success-foreground: 210 40% 98%;
+    /* Success: Teal #396766 */
+    --success: 179 29% 31%;
+    --success-foreground: 0 0% 100%;
 
-    --warning: 45 100% 55%;
-    --warning-foreground: 222 47% 6%;
+    --warning: 30 91% 54%;
+    --warning-foreground: 0 0% 20%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 15%;
-    --ring: 187 100% 50%;
+    --border: 0 0% 88%;
+    --input: 0 0% 92%;
+    --ring: 189 100% 47%;
 
     --radius: 0.75rem;
 
-    --chart-1: 187 100% 50%;
-    --chart-2: 32 100% 55%;
-    --chart-3: 142 76% 45%;
-    --chart-4: 280 100% 65%;
-    --chart-5: 45 100% 55%;
+    /* Chart colors using Edge palette */
+    --chart-1: 189 100% 47%;  /* Cyan */
+    --chart-2: 30 91% 54%;    /* Orange */
+    --chart-3: 269 100% 31%;  /* Purple */
+    --chart-4: 179 29% 31%;   /* Teal */
+    --chart-5: 0 0% 20%;      /* Dark Gray */
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 187 100% 50%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 47% 14%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 30% 18%;
-    --sidebar-ring: 187 100% 50%;
+    /* Sidebar - Using secondary purple */
+    --sidebar-background: 269 100% 31%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 189 100% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 269 80% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 269 60% 40%;
+    --sidebar-ring: 189 100% 47%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(187, 100%, 50%) 0%, hsl(210, 100%, 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(32, 100%, 55%) 0%, hsl(45, 100%, 55%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(222, 47%, 10%) 0%, hsl(222, 47%, 8%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(187, 100%, 50%, 0.15) 0%, transparent 70%);
+    /* Edge Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(189, 100%, 47%) 0%, hsl(269, 100%, 31%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(30, 91%, 54%) 0%, hsl(30, 91%, 65%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(189, 100%, 47%, 0.1) 0%, transparent 70%);
 
-    --shadow-glow: 0 0 40px hsl(187, 100%, 50%, 0.2);
-    --shadow-card: 0 8px 32px hsl(0, 0%, 0%, 0.4);
-    --shadow-elevated: 0 20px 60px hsl(0, 0%, 0%, 0.5);
+    --shadow-glow: 0 0 40px hsl(189, 100%, 47%, 0.15);
+    --shadow-card: 0 4px 20px hsl(0, 0%, 0%, 0.08);
+    --shadow-elevated: 0 12px 40px hsl(0, 0%, 0%, 0.12);
 
-    --glass-bg: 222 47% 10%;
-    --glass-border: 222 30% 25%;
+    --glass-bg: 0 0% 100%;
+    --glass-border: 0 0% 88%;
   }
 
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 20%;
+    --foreground: 0 0% 98%;
   }
 }
 
@@ -93,9 +101,10 @@
 
 @layer components {
   .glass-card {
-    @apply backdrop-blur-xl border;
-    background: hsl(var(--glass-bg) / 0.6);
-    border-color: hsl(var(--glass-border) / 0.5);
+    @apply backdrop-blur-sm border rounded-xl;
+    background: hsl(var(--glass-bg) / 0.9);
+    border-color: hsl(var(--glass-border));
+    box-shadow: var(--shadow-card);
   }
 
   .gradient-text {

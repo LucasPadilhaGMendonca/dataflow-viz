@@ -37,13 +37,13 @@ export const Header = () => {
         </div>
         
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground hover:bg-secondary/50">
+          <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground hover:bg-muted">
             <Bell className="w-5 h-5" />
           </Button>
-          <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground hover:bg-secondary/50">
+          <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground hover:bg-muted">
             <Settings className="w-5 h-5" />
           </Button>
-          <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground hover:text-foreground hover:bg-secondary/50">
+          <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground hover:text-foreground hover:bg-muted">
             <Menu className="w-5 h-5" />
           </Button>
         </div>
