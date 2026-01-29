@@ -1,20 +1,20 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
 const data = [
-  { name: 'Total (cancela todo contrato)', value: 42, percentage: '63%' },
-  { name: 'Não Informado', value: 22, percentage: '33%' },
-  { name: 'Downgrade', value: 2, percentage: '3%' },
-  { name: 'Outro', value: 1, percentage: '1%' },
+  { name: 'Eletrônicos', value: 35, percentage: '35%' },
+  { name: 'Vestuário', value: 28, percentage: '28%' },
+  { name: 'Casa & Jardim', value: 22, percentage: '22%' },
+  { name: 'Esportes', value: 15, percentage: '15%' },
 ];
 
-const COLORS = ['hsl(187, 100%, 50%)', 'hsl(32, 100%, 55%)', 'hsl(142, 76%, 45%)', 'hsl(280, 100%, 65%)'];
+const COLORS = ['hsl(217, 91%, 53%)', 'hsl(263, 70%, 58%)', 'hsl(239, 84%, 67%)', 'hsl(280, 68%, 60%)'];
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className="glass-card rounded-lg p-3 border border-primary/30">
         <p className="text-foreground font-medium">{payload[0].name}</p>
-        <p className="text-primary font-semibold">{payload[0].value} ({payload[0].payload.percentage})</p>
+        <p className="text-primary font-semibold">{payload[0].payload.percentage}</p>
       </div>
     );
   }

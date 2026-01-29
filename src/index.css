@@ -16,19 +16,19 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    /* Primary: Cyan #00d0f2 */
-    --primary: 189 100% 47%;
+    /* Primary: Deep Blue #2563eb */
+    --primary: 217 91% 53%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Purple #4c009f */
-    --secondary: 269 100% 31%;
+    /* Secondary: Purple #7c3aed */
+    --secondary: 263 70% 58%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 94%;
     --muted-foreground: 0 0% 45%;
 
-    /* Accent: Orange #f58a1f */
-    --accent: 30 91% 54%;
+    /* Accent: Indigo #6366f1 */
+    --accent: 239 84% 67%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -47,30 +47,30 @@
 
     --radius: 0.75rem;
 
-    /* Chart colors using Edge palette */
-    --chart-1: 189 100% 47%;  /* Cyan */
-    --chart-2: 30 91% 54%;    /* Orange */
-    --chart-3: 269 100% 31%;  /* Purple */
-    --chart-4: 179 29% 31%;   /* Teal */
-    --chart-5: 0 0% 20%;      /* Dark Gray */
+    /* Chart colors - Blue/Purple palette */
+    --chart-1: 217 91% 53%;   /* Blue */
+    --chart-2: 263 70% 58%;   /* Purple */
+    --chart-3: 239 84% 67%;   /* Indigo */
+    --chart-4: 199 89% 48%;   /* Sky */
+    --chart-5: 280 68% 60%;   /* Violet */
 
     /* Sidebar - Using secondary purple */
-    --sidebar-background: 269 100% 31%;
+    --sidebar-background: 263 70% 58%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 189 100% 47%;
+    --sidebar-primary: 217 91% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 269 80% 40%;
+    --sidebar-accent: 263 60% 50%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 269 60% 40%;
-    --sidebar-ring: 189 100% 47%;
+    --sidebar-border: 263 50% 50%;
+    --sidebar-ring: 217 91% 53%;
 
-    /* Edge Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(189, 100%, 47%) 0%, hsl(269, 100%, 31%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(30, 91%, 54%) 0%, hsl(30, 91%, 65%) 100%);
+    /* Gradients - Blue/Purple */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 53%) 0%, hsl(263, 70%, 58%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(239, 84%, 67%) 0%, hsl(263, 70%, 68%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(189, 100%, 47%, 0.1) 0%, transparent 70%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(217, 91%, 53%, 0.1) 0%, transparent 70%);
 
-    --shadow-glow: 0 0 40px hsl(189, 100%, 47%, 0.15);
+    --shadow-glow: 0 0 40px hsl(217, 91%, 53%, 0.15);
     --shadow-card: 0 4px 20px hsl(0, 0%, 0%, 0.08);
     --shadow-elevated: 0 12px 40px hsl(0, 0%, 0%, 0.12);
 

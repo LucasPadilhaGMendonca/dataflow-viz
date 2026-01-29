@@ -1,14 +1,25 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 const data = [
-  { name: 'MDS Suitable', value: 143041, color: 'hsl(187, 100%, 50%)' },
-  { name: 'DFS Hosting', value: 91324, color: 'hsl(187, 100%, 45%)' },
-  { name: 'CFS VMware', value: 76440, color: 'hsl(187, 100%, 40%)' },
-  { name: 'MDS Database', value: 63033, color: 'hsl(32, 100%, 55%)' },
-  { name: 'DFS Colocation', value: 16509, color: 'hsl(32, 100%, 50%)' },
-  { name: 'TFS Internet', value: 16332, color: 'hsl(32, 100%, 45%)' },
-  { name: 'PSS Payments', value: 9995, color: 'hsl(142, 76%, 45%)' },
-  { name: 'CFS Virtustream', value: 7336, color: 'hsl(142, 76%, 40%)' },
+  { name: 'iPhone 15 Pro', value: 185000 },
+  { name: 'MacBook Air M3', value: 142000 },
+  { name: 'Smart TV 65"', value: 98000 },
+  { name: 'PlayStation 5', value: 76000 },
+  { name: 'Notebook Dell', value: 54000 },
+  { name: 'Air Fryer', value: 32000 },
+  { name: 'Fones Bluetooth', value: 28000 },
+  { name: 'Smartwatch', value: 18000 },
+];
+
+const COLORS = [
+  'hsl(217, 91%, 53%)', 
+  'hsl(217, 91%, 58%)', 
+  'hsl(263, 70%, 58%)', 
+  'hsl(263, 70%, 63%)',
+  'hsl(239, 84%, 67%)',
+  'hsl(239, 84%, 72%)',
+  'hsl(280, 68%, 60%)',
+  'hsl(280, 68%, 65%)'
 ];
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -35,16 +46,16 @@ export const BarChartComponent = () => {
       >
         <defs>
           <linearGradient id="barGradient" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="hsl(187, 100%, 40%)" />
-            <stop offset="100%" stopColor="hsl(187, 100%, 55%)" />
+            <stop offset="0%" stopColor="hsl(217, 91%, 45%)" />
+            <stop offset="100%" stopColor="hsl(217, 91%, 60%)" />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray="3 3" stroke="hsl(222, 30%, 18%)" horizontal={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke="hsl(0, 0%, 88%)" horizontal={false} />
         <XAxis 
           type="number" 
           axisLine={false} 
           tickLine={false}
-          tick={{ fill: 'hsl(215, 20%, 55%)', fontSize: 11 }}
+          tick={{ fill: 'hsl(0, 0%, 45%)', fontSize: 11 }}
           tickFormatter={(value) => `R$ ${(value / 1000).toFixed(0)}k`}
         />
         <YAxis 
@@ -52,8 +63,8 @@ export const BarChartComponent = () => {
           dataKey="name" 
           axisLine={false} 
           tickLine={false}
-          tick={{ fill: 'hsl(215, 20%, 55%)', fontSize: 11 }}
-          width={100}
+          tick={{ fill: 'hsl(0, 0%, 45%)', fontSize: 11 }}
+          width={110}
         />
         <Tooltip content={<CustomTooltip />} />
         <Bar 
@@ -62,7 +73,7 @@ export const BarChartComponent = () => {
           barSize={20}
         >
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={entry.color} />
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Bar>
       </BarChart>

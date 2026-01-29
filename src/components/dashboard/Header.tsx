@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Bell, Settings, Menu } from "lucide-react";
+import { BarChart3, Bell, Settings, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
@@ -14,11 +14,11 @@ export const Header = () => {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
-              <Shield className="w-6 h-6 text-primary" />
+              <BarChart3 className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Edge<span className="text-primary">.uol</span></h1>
-              <p className="text-xs text-muted-foreground">Guardião de Clientes</p>
+              <h1 className="text-xl font-bold text-foreground">Sales<span className="text-primary">.hub</span></h1>
+              <p className="text-xs text-muted-foreground">Central de Vendas</p>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@ export const Header = () => {
           >
             <span className="text-muted-foreground">Dashboard</span>
             <span className="mx-2 text-border">|</span>
-            <span className="gradient-text">Downgrade, Cancelamento e Renegociação</span>
+            <span className="gradient-text">Análise de Performance Comercial</span>
           </motion.h2>
         </div>
         
