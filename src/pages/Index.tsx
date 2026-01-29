@@ -1,4 +1,4 @@
-import { Shield, DollarSign, TrendingDown, AlertTriangle } from "lucide-react";
+import { ShoppingCart, DollarSign, TrendingUp, Users } from "lucide-react";
 import { Header } from "@/components/dashboard/Header";
 import { FilterBar } from "@/components/dashboard/FilterBar";
 import { KPICard } from "@/components/dashboard/KPICard";
@@ -27,34 +27,35 @@ const Index = () => {
           {/* KPI Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <KPICard
-              title="Total de Guardiões"
-              value="67"
-              subtitle="Casos ativos no período"
-              icon={Shield}
-              trend={{ value: 12, isPositive: false }}
+              title="Total de Vendas"
+              value="1.247"
+              subtitle="Pedidos realizados no mês"
+              icon={ShoppingCart}
+              trend={{ value: 18, isPositive: true }}
               delay={0.1}
             />
             <KPICard
-              title="Faturamento em Risco"
-              value="R$ 443.7K"
-              subtitle="Valor total dos produtos"
+              title="Receita Total"
+              value="R$ 892.5K"
+              subtitle="Faturamento do período"
               icon={DollarSign}
-              trend={{ value: 8, isPositive: false }}
+              trend={{ value: 24, isPositive: true }}
               delay={0.2}
             />
             <KPICard
-              title="Taxa de Cancelamento"
-              value="63%"
-              subtitle="Cancela todo o contrato"
-              icon={TrendingDown}
-              trend={{ value: 5, isPositive: false }}
+              title="Taxa de Conversão"
+              value="8.7%"
+              subtitle="Visitantes convertidos"
+              icon={TrendingUp}
+              trend={{ value: 12, isPositive: true }}
               delay={0.3}
             />
             <KPICard
-              title="Casos Críticos"
-              value="15"
-              subtitle="Requerem atenção imediata"
-              icon={AlertTriangle}
+              title="Novos Clientes"
+              value="342"
+              subtitle="Cadastros no período"
+              icon={Users}
+              trend={{ value: 15, isPositive: true }}
               delay={0.4}
             />
           </div>
@@ -62,8 +63,8 @@ const Index = () => {
           {/* Charts Row 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <ChartCard 
-              title="Evolução Mensal de Guardiões" 
-              subtitle="Quantidade total por mês e ano"
+              title="Evolução de Vendas" 
+              subtitle="Faturamento mensal em milhares"
               delay={0.3}
               className="lg:col-span-2"
             >
@@ -71,8 +72,8 @@ const Index = () => {
             </ChartCard>
             
             <ChartCard 
-              title="Tipo de Cancelamento" 
-              subtitle="Distribuição por categoria"
+              title="Vendas por Categoria" 
+              subtitle="Distribuição de receita"
               delay={0.4}
             >
               <DonutChartComponent />
@@ -82,16 +83,16 @@ const Index = () => {
           {/* Charts Row 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <ChartCard 
-              title="Valor por Produto em Risco" 
-              subtitle="Faturamento de risco por produto"
+              title="Receita por Produto" 
+              subtitle="Faturamento em milhares (R$)"
               delay={0.5}
             >
               <BarChartComponent />
             </ChartCard>
             
             <ChartCard 
-              title="Quantidade por Produto" 
-              subtitle="Total de guardiões por produto"
+              title="Quantidade Vendida" 
+              subtitle="Unidades por produto"
               delay={0.6}
             >
               <HorizontalBarChart />

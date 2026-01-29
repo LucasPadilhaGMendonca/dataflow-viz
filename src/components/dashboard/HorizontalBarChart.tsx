@@ -1,14 +1,14 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'MDS Suitable Services', value: 15 },
-  { name: 'MDS Database Manage', value: 13 },
-  { name: 'DFS Hosting', value: 11 },
-  { name: 'PSS Payments', value: 5 },
-  { name: 'CFS Multicloud', value: 4 },
-  { name: 'CFS VMware', value: 4 },
-  { name: 'DFS Internet Pro', value: 4 },
-  { name: 'PSS Payments EDI', value: 3 },
+  { name: 'iPhone 15 Pro', value: 287 },
+  { name: 'MacBook Air M3', value: 156 },
+  { name: 'Smart TV 65"', value: 134 },
+  { name: 'PlayStation 5', value: 98 },
+  { name: 'Notebook Dell', value: 76 },
+  { name: 'Air Fryer', value: 245 },
+  { name: 'Fones Bluetooth', value: 312 },
+  { name: 'Smartwatch', value: 189 },
 ];
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -16,7 +16,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
     return (
       <div className="glass-card rounded-lg p-3 border border-primary/30">
         <p className="text-foreground font-medium text-sm">{label}</p>
-        <p className="text-accent font-semibold">{payload[0].value} guardiões</p>
+        <p className="text-secondary font-semibold">{payload[0].value} unidades</p>
       </div>
     );
   }
@@ -33,24 +33,24 @@ export const HorizontalBarChart = () => {
       >
         <defs>
           <linearGradient id="accentBarGradient" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="hsl(32, 100%, 45%)" />
-            <stop offset="100%" stopColor="hsl(32, 100%, 60%)" />
+            <stop offset="0%" stopColor="hsl(263, 70%, 50%)" />
+            <stop offset="100%" stopColor="hsl(263, 70%, 65%)" />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray="3 3" stroke="hsl(222, 30%, 18%)" horizontal={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke="hsl(0, 0%, 88%)" horizontal={false} />
         <XAxis 
           type="number" 
           axisLine={false} 
           tickLine={false}
-          tick={{ fill: 'hsl(215, 20%, 55%)', fontSize: 11 }}
+          tick={{ fill: 'hsl(0, 0%, 45%)', fontSize: 11 }}
         />
         <YAxis 
           type="category" 
           dataKey="name" 
           axisLine={false} 
           tickLine={false}
-          tick={{ fill: 'hsl(215, 20%, 55%)', fontSize: 10 }}
-          width={120}
+          tick={{ fill: 'hsl(0, 0%, 45%)', fontSize: 10 }}
+          width={110}
         />
         <Tooltip content={<CustomTooltip />} />
         <Bar 

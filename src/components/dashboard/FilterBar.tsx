@@ -19,13 +19,13 @@ export const FilterBar = () => {
       
       <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted border border-border hover:border-primary/50 transition-colors cursor-pointer">
         <Filter className="w-4 h-4 text-muted-foreground" />
-        <span className="text-sm text-foreground">Produto</span>
+        <span className="text-sm text-foreground">Categoria</span>
         <ChevronDown className="w-4 h-4 text-muted-foreground" />
       </div>
       
       <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted border border-border hover:border-primary/50 transition-colors cursor-pointer">
         <Filter className="w-4 h-4 text-muted-foreground" />
-        <span className="text-sm text-foreground">Status</span>
+        <span className="text-sm text-foreground">Vendedor</span>
         <ChevronDown className="w-4 h-4 text-muted-foreground" />
       </div>
       
