@@ -17,8 +17,8 @@ export const Header = () => {
               <BarChart3 className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Sales<span className="text-primary">.hub</span></h1>
-              <p className="text-xs text-muted-foreground">Central de Vendas</p>
+              <h1 className="text-xl font-bold text-foreground">Tech<span className="text-primary">Zone</span></h1>
+              <p className="text-xs text-muted-foreground">E-commerce Analytics</p>
             </div>
           </div>
         </div>
